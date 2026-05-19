@@ -4,6 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
         <title>Document</title>
+    <style>
+        .gender-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+    </style>
     </head>
     <body>
         <form>
@@ -14,14 +24,29 @@
             <input type="text" id="myid" name="myid">
             <br />
             <label>성별</label>
-            <input type="radio" id="man" name="gender" value="남자" checked>
-            <label>남자</label>
-            <input type="radio" id="woman" name="gender" value="여자">
-
-            <label>여자</label>
-            <input type="radio" id="man" name="gender" value="남자">
+            <span class="gender-item">
+                <input type="radio" id="man" name="gender" value="남자" checked>
+                <label for="man">남자</label>
+            </span>
+            <span class="gender-item">
+                <input type="radio" id="woman" name="gender" value="여자">
+                <label for="woman">여자</label>
+            </span>
             <button type="button">전송하기</button>
-            <button type="reset">초기화하기전송하기</button>
+            <button type="reset">초기화하기</button>
         </form>
+
+        <script>
+            document.querySelectorAll('.gender-item').forEach(function(item) {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.15)';
+                    this.style.backgroundColor = '#e8f0fe';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.backgroundColor = '';
+                });
+            });
+        </script>
     </body>
 </html>
