@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="getValue();">값출력</button>
+    <p id="result"></p>
+
+    <script>
+        function getValue() {
+            const randVal = Math.floor( Math.random() * 20) + 1; // 1 ~ 20 사이 랜덤값
+            const result = document.querySelector('#result');
+
+            if(randVal >= 18) {
+                result.innerText = `${randVal}세 : 성인`;
+            }else if(randVal >= 13) {
+                result.innerText = `${randVal}세 : 청소년`;
+            }else {
+                result.innerText = `${randVal}세 : 어린이`;
+            }
+        }
+    </script>
+</body>
+</html>
