@@ -1,11 +1,39 @@
+# 클로드 관련파일
 .claude/
-#빌드관련 파일
+
+# 빌드관련 파일
 bin/
 build/
 target/
+out/
+dist/
+*.class
+*.jar
+*.war
 
-#설정관련파일
-
+# IDE 설정관련 파일
 .project
 .classpath
-.setting
+.settings
+.idea/
+*.iml
+.vscode/
+
+# 환경설정파일
+.env
+*.env.local
+*.env.development
+*.env.production
+
+# 의존성
+node_modules/
+package-lock.json
+
+# OS 관련파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 로그
+*.log
+npm-debug.log*
