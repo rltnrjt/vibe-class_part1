@@ -1,0 +1,11 @@
+.claude/
+#빌드관련 파일
+bin/
+build/
+target/
+
+#설정관련파일
+
+.project
+.classpath
+.setting
